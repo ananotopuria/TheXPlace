@@ -1,0 +1,102 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  justify-content: space-between;
+  padding: 4rem 6rem;
+
+  &__logo {
+    max-width: 20rem;
+  }
+  &__nav {
+    &-list {
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      font-size: 2rem;
+      gap: 1rem;
+      font-weight: 600;
+    }
+    &-link:link,
+    &-link:visited {
+      text-decoration: none;
+      color: $offWhite;
+      padding: 1rem 2rem;
+    }
+    &-link:hover,
+    &-link:active {
+      background-color: rgba(204, 212, 255, 0.05);
+      border-radius: 1rem;
+    }
+  }
+  &__btns {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  &__menu {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.green-btn {
+  color: $black;
+}
+
+.sticky .header {
+  background-color: rgba(33, 37, 41, 0.3);
+}
+
+.sign-in {
+  border: 1px solid #444;
+  border-radius: 1rem;
+}
+
+.green-btn {
+  border: 1px solid #444;
+  border-radius: 1rem;
+  background-color: $green;
+  text-decoration: none;
+  padding: 1rem 2rem;
+}
+.green-btn:hover {
+  box-shadow: 0px 0px 20px rgba(0, 255, 64, 0.5);
+}
+
+// below 1200px
+@media (max-width: 75em) {
+  // dropdown
+  .menu__btn {
+    display: block;
+  }
+  .header__menu {
+    display: none;
+    position: absolute;
+    top: 8rem;
+  }
+  .menu__btn:hover + .header__menu,
+  .header__menu:hover {
+    display: block;
+  }
+  .menu__btn {
+    position: relative;
+  }
+  .header__menu > .header__nav-item {
+    margin-bottom: 3rem;
+  }
+}
+
+// below 768px
+
+@media (max-width: 48em) {
+  .header {
+    display: none;
+    &__logo {
+      padding: 4rem 2rem;
+      max-width: 23rem;
+    }
+  }
+}

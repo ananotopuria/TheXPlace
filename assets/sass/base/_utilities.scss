@@ -1,0 +1,16 @@
+.wrapper {
+  background: radial-gradient(
+      circle at 15% 20%,
+      rgb(60, 0, 139),
+      rgba(0, 0, 0, 0) 39%
+    ),
+    radial-gradient(
+      circle at 85.57% 43.37%,
+      rgb(60, 0, 139),
+      rgba(0, 0, 0, 0) 39%
+    ),
+    radial-gradient(circle at 50% 50%, rgb(17, 17, 18), rgb(17, 17, 18) 100%);
+}
+.hidden {
+  display: none;
+}
