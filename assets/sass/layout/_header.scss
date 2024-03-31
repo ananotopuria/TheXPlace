@@ -89,14 +89,4 @@
   }
 }
 
-// below 768px
 
-@media (max-width: 48em) {
-  .header {
-    display: none;
-    &__logo {
-      padding: 4rem 2rem;
-      max-width: 23rem;
-    }
-  }
-}

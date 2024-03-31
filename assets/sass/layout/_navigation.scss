@@ -131,13 +131,5 @@
   }
 }
 
-.navigation {
-  &.hidden {
-    display: block;
-  }
-  @media only screen and (min-width: 48em) {
-    &.hidden {
-      display: none;
-    }
-  }
-}
+
+

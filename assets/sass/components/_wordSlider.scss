@@ -1,0 +1,13 @@
+.word__slider {
+  height: 1em;
+  margin: 0 0.5em;
+  overflow: hidden;
+  list-style-type: none;
+}
+
+.word__slider-words {
+  display: inline-block;
+  width: 100%;
+  animation: wordSlider 70s linear infinite;
+  text-align: center;
+}

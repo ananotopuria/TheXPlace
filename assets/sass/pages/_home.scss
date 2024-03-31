@@ -1,16 +1,170 @@
-.hero{
-    width: 100wv;
-    height: 100vh;
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  &__content {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    z-index: 10000;
+    color: $white;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    gap: 4rem;
+    font-size: 3rem;
+  }
+  &__title {
+    font-size: 5.6rem;
+  }
+  &__txt {
+    font-size: 2rem;
+    color: #ccc;
+    font-weight: 200;
+    display: flex;
     
+  }
+  &__btn {
+    display: inline-block;
+    margin-top: 10rem;
+    font-size: 2rem;
+    width: 20rem;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+  }
+
+  &__video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    video {
+      top: -18rem;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      position: absolute;
+      margin-top: 12rem;
+      padding: 6rem;
+      border-radius: 10rem;
+      z-index: 2;
+    }
+  }
 }
 
-.section{
-    
-    width: 100wv;
-    height: 100vh;
-    // background-color: aquamarine;
+.section {
+  width: 100vw;
+  height: 100vh;
 }
 
+// below 1400px
+@media (max-width: 87.5em) {
+  .hero__video-background {
+    max-width: 100%;
+  }
+  .hero__video-background video {
+    width: 100%;
+  }
+}
+
+// below 1200 px
+
+@media (max-width: 75em) {
+  &__video-background {
+    border-radius: 20%;
+    video {
+      top: 0;
+      left: 0;
+      margin: auto;
+      object-fit: cover;
+      padding: 0 6rem;
+    }
+  }
+}
+
+//below 1000px
+
+@media (max-width: 62.5em) {
+  .hero {
+    &__title {
+      font-size: 4rem;
+    }
+    &__video-background {
+      border-radius: 20%;
+      video {
+        top: 0;
+        left: 0;
+        margin: auto;
+        object-fit: cover;
+        padding: 0 6rem;
+      }
+    }
+  }
+}
+
+.navigation {
+  &.hidden {
+    display: block;
+  }
+}
+
+// below 768px
+
+@media only screen and (min-width: 48em) {
+  .navigation.hidden {
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .header {
+    display: none;
+    &__logo {
+      padding: 4rem 2rem;
+      max-width: 23rem;
+    }
+  }
+
+  .hero {
+    &__txt {
+      font-size: 1.6rem;
+    }
+    &__video-background {
+      video {
+        padding: 0 2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .hero {
+    &__content {
+      top: 30rem;
+    }
+    &__btn {
+      margin-top: 2rem;
+    }
+    &__video-background {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10rem;
+    }
+  }
+}
+@media (max-width: 475px) {
+  .hero {
+    &__content {
+      top: 25rem;
+    }
+    &__title {
+      font-size: 3rem;
+    }
+  }
+}
