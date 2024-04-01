@@ -32,6 +32,47 @@ body {
 body {
   font-family: "Space Grotesk", sans-serif; }
 
+.greeting {
+  width: 120rem;
+  margin: 0 auto;
+  padding: 3rem; }
+  .greeting__title {
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 600; }
+  .greeting__txt {
+    color: #ccc;
+    font-size: 3rem;
+    font-weight: 600; }
+
+.career__card-title {
+  color: #fff;
+  font-size: 2rem; }
+
+@media (max-width: 1200px) {
+  .greeting {
+    width: 100rem; }
+    .greeting__title {
+      font-size: 4rem; }
+    .greeting__txt {
+      font-size: 2rem; } }
+
+@media (max-width: 1000px) {
+  .greeting {
+    width: 70rem; }
+    .greeting__title {
+      font-size: 3rem; }
+    .greeting__txt {
+      font-size: 1.8rem; } }
+
+@media (max-width: 768px) {
+  .greeting {
+    width: 40rem; }
+    .greeting__title {
+      font-size: 2rem; }
+    .greeting__txt {
+      font-size: 1.2rem; } }
+
 .wrapper {
   background: radial-gradient(circle at 15% 20%, #3c008b, rgba(0, 0, 0, 0) 39%), radial-gradient(circle at 85.57% 43.37%, #3c008b, rgba(0, 0, 0, 0) 39%), radial-gradient(circle at 50% 50%, #111112, #111112 100%); }
 
@@ -49,6 +90,101 @@ body {
   width: 100%;
   animation: wordSlider 70s linear infinite;
   text-align: center; }
+
+.companies {
+  overflow: hidden;
+  margin: 5rem 6rem; }
+  .companies__slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideRight 200s linear infinite;
+    gap: 1rem; }
+    .companies__slider-img {
+      width: 20rem;
+      height: 10rem;
+      border: 1px solid #ccd4ff0d;
+      background-color: #ccd4ff0d;
+      border-radius: 2rem;
+      padding: 2rem; }
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-500%); } }
+
+@media (max-width: 1000px) {
+  .companies__slider-img {
+    width: 15rem;
+    height: 10rem; } }
+
+@media (max-width: 575px) {
+  .companies {
+    margin: 3rem 3rem; }
+    .companies__slider-img {
+      width: 10rem;
+      height: 7rem; } }
+
+@media (max-width: 475px) {
+  .companies {
+    margin: 0 3rem;
+    padding: 0; }
+    .companies__slider-img {
+      width: 10rem;
+      height: 7rem; } }
+
+.career {
+  padding: 6rem; }
+  .career__cards {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem; }
+  .career__card {
+    flex: 1;
+    background-color: #ccd4ff0d;
+    border-radius: 2rem;
+    color: #fff;
+    padding: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; }
+    .career__card-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+    .career__card-icon {
+      font-size: 2rem; }
+    .career__card-title {
+      font-size: 4.4rem;
+      font-weight: 600; }
+    .career__card-txt {
+      font-size: 2rem;
+      font-weight: 400;
+      color: #e5eaff73; }
+  .career__btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; }
+
+.step {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 2rem; }
+  .step__title {
+    font-size: 2rem; }
+  .step__txt {
+    font-size: 1.6rem;
+    color: #e5eaff73; }
+  .step__icon {
+    font-size: 2rem; }
 
 .header {
   display: flex;
@@ -323,9 +459,12 @@ body {
 
 @media (max-width: 575px) {
   .hero__content {
-    top: 30rem; }
+    top: 30rem;
+    padding: 0 2rem;
+    left: 0; }
   .hero__btn {
-    margin-top: 2rem; }
+    margin-top: 2rem;
+    width: 100%; }
   .hero__video-background {
     width: 100%;
     height: auto;

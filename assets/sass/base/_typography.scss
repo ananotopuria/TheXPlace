@@ -1,3 +1,60 @@
 body {
   font-family: "Space Grotesk", sans-serif;
 }
+
+.greeting {
+  width: 120rem;
+  margin: 0 auto;
+  padding: 3rem;
+  &__title {
+    color: $white;
+    font-size: 5rem;
+    font-weight: 600;
+  }
+  &__txt {
+    color: #ccc;
+    font-size: 3rem;
+    font-weight: 600;
+  }
+}
+
+.career__card-title{
+  color: $white;
+  font-size: 2rem;
+}
+
+@media (max-width: 1200px) {
+  .greeting {
+    width: 100rem;
+
+    &__title {
+      font-size: 4rem;
+    }
+    &__txt {
+      font-size: 2rem;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .greeting {
+    width: 70rem;
+
+    &__title {
+      font-size: 3rem;
+    }
+    &__txt {
+      font-size: 1.8rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .greeting {
+    width: 40rem;
+    &__title {
+      font-size: 2rem;
+    }
+    &__txt {
+      font-size: 1.2rem;
+    }
+  }
+}

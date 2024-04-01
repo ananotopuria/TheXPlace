@@ -1,0 +1,64 @@
+.career {
+  padding: 6rem;
+  // margin: 6rem;
+  &__cards {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  &__card {
+    flex: 1;
+    background-color: #ccd4ff0d;
+    border-radius: 2rem;
+    color: $white;
+    padding: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    &-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &-icon {
+      font-size: 2rem;
+    }
+    &-title {
+      font-size: 4.4rem;
+      font-weight: 600;
+    }
+    &-txt {
+      font-size: 2rem;
+      font-weight: 400;
+      color: #e5eaff73;
+    }
+  }
+  &__btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.step {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 2rem;
+  &__title {
+    font-size: 2rem;
+  }
+  &__txt {
+    font-size: 1.6rem;
+    color: #e5eaff73;
+  }
+  &__icon {
+    font-size: 2rem;
+  }
+}

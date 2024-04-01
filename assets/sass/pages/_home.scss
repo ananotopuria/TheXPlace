@@ -22,7 +22,6 @@
     color: #ccc;
     font-weight: 200;
     display: flex;
-    
   }
   &__btn {
     display: inline-block;
@@ -146,9 +145,13 @@
   .hero {
     &__content {
       top: 30rem;
+      padding: 0 2rem;
+
+      left: 0;
     }
     &__btn {
       margin-top: 2rem;
+      width: 100%;
     }
     &__video-background {
       width: 100%;
