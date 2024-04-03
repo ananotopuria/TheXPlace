@@ -1,6 +1,5 @@
 .career {
   padding: 6rem;
-  // margin: 6rem;
   &__cards {
     display: flex;
     flex-direction: row;
@@ -23,6 +22,11 @@
 
     &-icon {
       font-size: 2rem;
+      border-radius: 50%;
+      background-color: #ccd4ff1c;
+      padding: 2rem;
+      position: relative;
+      z-index: 2;
     }
     &-title {
       font-size: 4.4rem;
@@ -38,6 +42,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+  }
+  &__btn {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-top: 2rem;
   }
 }
 
@@ -60,5 +69,59 @@
   }
   &__icon {
     font-size: 2rem;
+    border-radius: 50%;
+    background-color: #ccd4ff0d;
+    padding: 2rem;
+    &-pink {
+      color: $gradientPink;
+    }
+    &-blue {
+      color: $gradientBlue;
+    }
+  }
+}
+
+.learn-btn {
+  color: $white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .career {
+    &__cards {
+      flex-direction: column;
+      gap: 4rem;
+    }
+    &__card {
+      &-title {
+        font-size: 3.4rem;
+      }
+      &-txt {
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: #e5eaff73;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .career {
+    padding: 2rem;
+    &__cards {
+      flex-direction: column;
+      gap: 4rem;
+    }
+    &__card {
+      padding: 2rem;
+      &-title {
+        font-size: 2.4rem;
+      }
+      &-txt {
+        font-size: 1.6rem;
+      }
+    }
   }
 }

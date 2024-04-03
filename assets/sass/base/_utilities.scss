@@ -14,3 +14,19 @@
 .hidden {
   display: none;
 }
+
+.circle,
+.circle2 {
+  font-size: 2rem;
+  border-radius: 50%;
+  background: linear-gradient(to right, $gradientPink, $gradientPurple);
+  background-color: #ddd;
+  padding: 2.8rem;
+  position: absolute;
+  margin: 0rem -3rem;
+  z-index: 1;
+}
+
+.circle2 {
+  background: linear-gradient(to right, $gradientBlue, $gradientLightBlue);
+}

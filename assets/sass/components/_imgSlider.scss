@@ -27,6 +27,7 @@
     transform: translateX(-500%);
   }
 }
+
 @media (max-width: 1000px) {
   .companies__slider-img {
     width: 15rem;
@@ -56,5 +57,11 @@
         height: 7rem;
       }
     }
+  }
+}
+
+@media (min-width: 1400px) {
+  .companies {
+    margin: 20rem 6rem;
   }
 }
