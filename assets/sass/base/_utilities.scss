@@ -30,3 +30,21 @@
 .circle2 {
   background: linear-gradient(to right, $gradientBlue, $gradientLightBlue);
 }
+
+
+.dots{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.dot{
+  width: 10px;
+  height: 10px;
+  border-radius: 100px;
+  background-color: #444;
+}
+.active-dot{
+  background-color: $green;
+}

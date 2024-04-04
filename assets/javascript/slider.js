@@ -1,35 +1,35 @@
-
 export const testimonialSlider = function () {
-  const slides = document.querySelectorAll(".testimonial__slider--slide");
-  const btnRights = document.querySelectorAll(".testimonial__slider--btn-right");
+const slides = document.querySelectorAll(".testimonial__slider--slide");
+const btnRight = document.querySelector(".testimonial__slider--btn-right");
+const dots = document.querySelectorAll(".dots .dot");
 
-  let curSlide = 0;
-  const maxSlide = slides.length;
+let curSlide = 0;
+const maxSlide = slides.length;
 
-  const goToSlide = function (slide) {
-    slides.forEach((s, i) => {
-      s.style.opacity = i === slide ? 1 : 0;
-    });
-  };
-
-  const nextSlide = function () {
-    curSlide = (curSlide + 1) % maxSlide;
-    goToSlide(curSlide);
-  };
-
-  btnRights.forEach(function (btnRight) {
-    btnRight.addEventListener("click", function () {
-      nextSlide();
-    });
+const goToSlide = function (slide) {
+  slides.forEach((s, i) => {
+    s.style.opacity = i === slide ? 1 : 0;
   });
-
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "ArrowRight") {
-      nextSlide();
-    }
+  
+  // Update active dot
+  dots.forEach((dot, index) => {
+    dot.classList.toggle("active-dot", index === slide);
   });
 };
 
-document.addEventListener("DOMContentLoaded", function () {
-  testimonialSlider();
+const nextSlide = function () {
+  curSlide = (curSlide + 1) % maxSlide;
+  goToSlide(curSlide);
+};
+
+btnRight.addEventListener("click", nextSlide);
+
+document.addEventListener("keydown", function (e) {
+  if (e.key === "ArrowRight") {
+    nextSlide();
+  }
 });
+
+// Initialize slider
+goToSlide(curSlide);
+}
