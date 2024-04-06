@@ -1,0 +1,77 @@
+.opportunities {
+  background-color: #111112;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &__card {
+    width: 100wv;
+    height: 100vh;
+    margin: 0 6rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    color: $white;
+    background-color: #1a1b1e;
+    padding: 6rem;
+    border-radius: 2rem;
+    @for $i from 1 through 10 {
+      &:nth-child(#{$i}):nth-child(odd) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+  &__details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  &__img {
+    flex: 1;
+    width: 10rem;
+    height: 50rem;
+  }
+  &__title {
+    font-size: 5.5rem;
+  }
+  &__txt {
+    font-size: 2rem;
+    color: #e5eaff73;
+  }
+  &__btn {
+    width: 20rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .opportunities {
+    &__card {
+      margin: 0 2rem;
+      flex-direction: column;
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}):nth-child(odd) {
+          flex-direction: column;
+        }
+      }
+    }
+    &__details {
+      gap: 1rem;
+    }
+    &__img {
+      width: 20rem;
+    }
+    &__title {
+      font-size: 2rem;
+    }
+    &__txt {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+    .opportunities__btn{
+        width: 100%;
+    }
+}
