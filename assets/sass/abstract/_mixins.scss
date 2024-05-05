@@ -1,0 +1,12 @@
+.navigation__checkbox:checked ~ .navigation__nav .navigation__item {
+  @for $i from 1 through 6 {
+    &:nth-child(#{$i}) {
+      opacity: 1;
+      transition-delay: 0.7s + ($i * 0.1s);
+    }
+  }
+}
+
+.navigation__checkbox:not(:checked) ~ .navigation__nav .navigation__item {
+  opacity: 0;
+}
