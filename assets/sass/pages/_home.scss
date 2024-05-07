@@ -171,3 +171,14 @@
   }
 }
 
+@media (max-width: 767.98px) {
+  .navigation__logo {
+    position: relative;
+    z-index: 10000; 
+  }
+
+  .burger-menu {
+    position: relative;
+    z-index: 10000; 
+  }
+}
